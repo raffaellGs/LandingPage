@@ -1,0 +1,231 @@
+*{  margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+body,html{
+    height: 100%;
+    background-color: #ccc;
+}
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+}
+/*section{
+    padding: 0 4%;
+}
+header{
+   padding: 0 4%; 
+}*/
+.btn{
+    background-color: #333;
+    padding: 10px 21px;
+    color: #ddd;
+    text-decoration: none;
+    border: 0;
+}
+.main-nav ul{
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+}
+.main-nav ul a{
+    background-color: #ddd;
+    margin: 20px 0;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    padding: 7px 0;
+    text-transform: uppercase;
+    color: black;
+    box-shadow: 4px 7px 4px rgba(51, 51, 51, 0.8);
+}
+.main-nav ul a:hover{
+    background-color: #333;
+    color: white;
+}
+
+/* Aqui começa grid boxes */
+
+.box-grid{
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-gap: 15px;
+    max-width: 1280px;
+    margin: 0 auto
+}
+.box-principal{
+    background-image: url(../image/showcase.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px;
+    grid-row: 1 / 3;
+    box-shadow: 4px 7px 4px rgba(51, 51, 51, 0.16);
+}
+.box-principal h2{
+    color: #ddd;
+    font-size: 40px;
+    margin: 11px 0;
+}
+.box-principal p{
+    color: #ddd;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.top-box{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #ddd;
+    padding: 25px;
+    box-shadow: 4px 7px 4px rgba(51, 51, 51, 0.16);
+    overflow: hidden
+}
+.top-box h4{
+    font-size: 20px;
+}
+/* *********************************** */
+
+ /* AQUI COMEÇA A SESSÃO SERVIÇOS */
+
+.servicos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 10px auto;
+    max-width: 1280px;
+    grid-gap: 15px;
+}
+.boxs{
+    display: grid;
+    background-color: #ddd;
+    box-shadow: 4px 9px 8px rgba(51, 51, 51, 0.14);
+    padding: 25px 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.boxs h4{
+    margin: 11px 0
+
+}
+ /* infomação */
+ 
+ .info{
+    display: grid;
+    grid-gap: 30px;
+    background-color: #ddd;
+    max-width: 1280px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 44px;
+    box-shadow: 4px 7px 4px rgba(51, 51, 51, 0.16);
+ }
+ .info h2{
+     margin: 11px 0
+ }
+ .info p{
+     margin-bottom: 18px
+ }
+ /* ************************** */
+
+ /* PORTIFORIO */
+
+ .flex-port{
+     display: flex;
+     max-width: 1280px;
+     flex-wrap: wrap;
+     margin: 15px auto;
+     flex-direction: row-reverse;
+     background-color: #ddd;
+     box-shadow: 4px 7px 4px rgba(51, 51, 51, 0.16);
+ }
+ .flex-port >.img-port{
+     flex: 1 1 230px;
+     margin: 5px;
+ }
+ footer{
+     text-align: center;
+     background-color: #333;
+     color: white;
+     height: 60px;
+     line-height: 60px;
+     font-style: italic;
+     font-weight: 100
+ }
+
+/* **************************************************** */
+
+/* AQUI COMEÇA O RESPONSIVO */
+
+@media screen and (max-width: 768px){
+    .main-nav ul{
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+    .main-nav ul a{
+        margin: 8px 0;
+        padding: 10px 0;
+    }
+    .box-grid{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1280px;
+        margin: 0 auto
+    }
+    .top-box{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        margin: 5px 0;
+    }
+    .servicos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10px auto;
+        grid-gap: 15px;
+    }
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 44px;
+     }
+     .flex-port{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 10px;
+    }
+    .flex-port >.img-port:nth-child(9){
+        grid-column: 1 / 3
+    }
+    
+}
+@media screen and (max-width: 392px){
+    .top-box{
+        padding: 30px;
+        line-height: 30px;
+
+    }
+    .servicos{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 10px auto;
+        max-width: 1280px;
+        grid-gap: 15px;
+    }
+
+}
